@@ -2,18 +2,23 @@ name: Daily Data Pull
 
 on:
   schedule:
-    - cron: '49 14 * * *'  # Schedule to run every day at 3:00 AM UTC
+    - cron: '5 * * * *'  # Schedule to run every day at 3:00 AM UTC
 
 jobs:
-  run-script:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@main
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content
 
-      - name: Set up Python
-        uses: actions/setup-python@main
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x # install the python version needed
 
-      - name: Run Script
-        run: python turner-supply/test_deploy@main
+      - name: execute py script # run main.py
+        run: python main.py
+
+
+
+
