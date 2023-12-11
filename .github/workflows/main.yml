@@ -10,16 +10,10 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@main
 
       - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9  # Replace with your Python version
-
-      - name: Install Dependencies
-        run: |
-          #pip install -r requirements.txt  # If you have dependencies
+        uses: actions/setup-python@main
 
       - name: Run Script
-        run: python turner-supply/test_deploy
+        run: python turner-supply/test_deploy@main
