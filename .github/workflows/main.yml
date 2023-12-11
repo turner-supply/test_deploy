@@ -2,7 +2,7 @@ name: Daily Data Pull
 
 on:
   schedule:
-    - cron: '40 2 * * *'  # Schedule to run every day at 3:00 AM UTC
+    - cron: '47 14 * * *'  # Schedule to run every day at 3:00 AM UTC
 
 jobs:
   run-script:
