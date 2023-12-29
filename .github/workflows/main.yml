@@ -2,7 +2,7 @@
 
 #on:
   #schedule:
-    #- cron: '*/5 * * * *'  # Schedule to run every day at 3:00 AM UTC
+    #- cron: '*/5 * * * *'  # Schedule to run every day 5 minutes
 
 #jobs:
   #build:
